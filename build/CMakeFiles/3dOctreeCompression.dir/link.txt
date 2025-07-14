@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/3dOctreeCompression.dir/main.cpp.o CMakeFiles/3dOctreeCompression.dir/src/glad.c.o -o 3dOctreeCompression  /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libglfw.so.3.3 

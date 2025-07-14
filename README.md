@@ -1,1 +1,1 @@
-# octtree-video-compression
+# 3d-octtree-compression
