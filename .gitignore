@@ -136,6 +136,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.pyc
+venv/
 
 # Models directory (if you want to exclude large model files)
 # Uncomment if models are downloaded separately or too large
