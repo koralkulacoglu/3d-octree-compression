@@ -69,53 +69,120 @@ include CMakeFiles/3dOctreeCompression.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/3dOctreeCompression.dir/flags.make
 
-CMakeFiles/3dOctreeCompression.dir/main.cpp.o: CMakeFiles/3dOctreeCompression.dir/flags.make
-CMakeFiles/3dOctreeCompression.dir/main.cpp.o: /home/kulac/projects/3d-octtree-compression/main.cpp
-CMakeFiles/3dOctreeCompression.dir/main.cpp.o: CMakeFiles/3dOctreeCompression.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/3dOctreeCompression.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3dOctreeCompression.dir/main.cpp.o -MF CMakeFiles/3dOctreeCompression.dir/main.cpp.o.d -o CMakeFiles/3dOctreeCompression.dir/main.cpp.o -c /home/kulac/projects/3d-octtree-compression/main.cpp
+CMakeFiles/3dOctreeCompression.dir/main.cc.o: CMakeFiles/3dOctreeCompression.dir/flags.make
+CMakeFiles/3dOctreeCompression.dir/main.cc.o: /home/kulac/projects/3d-octtree-compression/main.cc
+CMakeFiles/3dOctreeCompression.dir/main.cc.o: CMakeFiles/3dOctreeCompression.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/3dOctreeCompression.dir/main.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3dOctreeCompression.dir/main.cc.o -MF CMakeFiles/3dOctreeCompression.dir/main.cc.o.d -o CMakeFiles/3dOctreeCompression.dir/main.cc.o -c /home/kulac/projects/3d-octtree-compression/main.cc
 
-CMakeFiles/3dOctreeCompression.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/3dOctreeCompression.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kulac/projects/3d-octtree-compression/main.cpp > CMakeFiles/3dOctreeCompression.dir/main.cpp.i
+CMakeFiles/3dOctreeCompression.dir/main.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/3dOctreeCompression.dir/main.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kulac/projects/3d-octtree-compression/main.cc > CMakeFiles/3dOctreeCompression.dir/main.cc.i
 
-CMakeFiles/3dOctreeCompression.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3dOctreeCompression.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kulac/projects/3d-octtree-compression/main.cpp -o CMakeFiles/3dOctreeCompression.dir/main.cpp.s
+CMakeFiles/3dOctreeCompression.dir/main.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3dOctreeCompression.dir/main.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kulac/projects/3d-octtree-compression/main.cc -o CMakeFiles/3dOctreeCompression.dir/main.cc.s
 
-CMakeFiles/3dOctreeCompression.dir/src/glad.c.o: CMakeFiles/3dOctreeCompression.dir/flags.make
-CMakeFiles/3dOctreeCompression.dir/src/glad.c.o: /home/kulac/projects/3d-octtree-compression/src/glad.c
-CMakeFiles/3dOctreeCompression.dir/src/glad.c.o: CMakeFiles/3dOctreeCompression.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/3dOctreeCompression.dir/src/glad.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/3dOctreeCompression.dir/src/glad.c.o -MF CMakeFiles/3dOctreeCompression.dir/src/glad.c.o.d -o CMakeFiles/3dOctreeCompression.dir/src/glad.c.o -c /home/kulac/projects/3d-octtree-compression/src/glad.c
+CMakeFiles/3dOctreeCompression.dir/src/Model.cc.o: CMakeFiles/3dOctreeCompression.dir/flags.make
+CMakeFiles/3dOctreeCompression.dir/src/Model.cc.o: /home/kulac/projects/3d-octtree-compression/src/Model.cc
+CMakeFiles/3dOctreeCompression.dir/src/Model.cc.o: CMakeFiles/3dOctreeCompression.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/3dOctreeCompression.dir/src/Model.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3dOctreeCompression.dir/src/Model.cc.o -MF CMakeFiles/3dOctreeCompression.dir/src/Model.cc.o.d -o CMakeFiles/3dOctreeCompression.dir/src/Model.cc.o -c /home/kulac/projects/3d-octtree-compression/src/Model.cc
 
-CMakeFiles/3dOctreeCompression.dir/src/glad.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/3dOctreeCompression.dir/src/glad.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kulac/projects/3d-octtree-compression/src/glad.c > CMakeFiles/3dOctreeCompression.dir/src/glad.c.i
+CMakeFiles/3dOctreeCompression.dir/src/Model.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/3dOctreeCompression.dir/src/Model.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kulac/projects/3d-octtree-compression/src/Model.cc > CMakeFiles/3dOctreeCompression.dir/src/Model.cc.i
 
-CMakeFiles/3dOctreeCompression.dir/src/glad.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/3dOctreeCompression.dir/src/glad.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kulac/projects/3d-octtree-compression/src/glad.c -o CMakeFiles/3dOctreeCompression.dir/src/glad.c.s
+CMakeFiles/3dOctreeCompression.dir/src/Model.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3dOctreeCompression.dir/src/Model.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kulac/projects/3d-octtree-compression/src/Model.cc -o CMakeFiles/3dOctreeCompression.dir/src/Model.cc.s
+
+CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o: CMakeFiles/3dOctreeCompression.dir/flags.make
+CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o: /home/kulac/projects/3d-octtree-compression/src/OBJLoader.cc
+CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o: CMakeFiles/3dOctreeCompression.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o -MF CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o.d -o CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o -c /home/kulac/projects/3d-octtree-compression/src/OBJLoader.cc
+
+CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kulac/projects/3d-octtree-compression/src/OBJLoader.cc > CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.i
+
+CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kulac/projects/3d-octtree-compression/src/OBJLoader.cc -o CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.s
+
+CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.o: CMakeFiles/3dOctreeCompression.dir/flags.make
+CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.o: /home/kulac/projects/3d-octtree-compression/src/CompressedModel.cc
+CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.o: CMakeFiles/3dOctreeCompression.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.o -MF CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.o.d -o CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.o -c /home/kulac/projects/3d-octtree-compression/src/CompressedModel.cc
+
+CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kulac/projects/3d-octtree-compression/src/CompressedModel.cc > CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.i
+
+CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kulac/projects/3d-octtree-compression/src/CompressedModel.cc -o CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.s
+
+CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o: CMakeFiles/3dOctreeCompression.dir/flags.make
+CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o: /home/kulac/projects/3d-octtree-compression/src/OctreeCompressor.cc
+CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o: CMakeFiles/3dOctreeCompression.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o -MF CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o.d -o CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o -c /home/kulac/projects/3d-octtree-compression/src/OctreeCompressor.cc
+
+CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kulac/projects/3d-octtree-compression/src/OctreeCompressor.cc > CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.i
+
+CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kulac/projects/3d-octtree-compression/src/OctreeCompressor.cc -o CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.s
+
+CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.o: CMakeFiles/3dOctreeCompression.dir/flags.make
+CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.o: /home/kulac/projects/3d-octtree-compression/src/ModelManager.cc
+CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.o: CMakeFiles/3dOctreeCompression.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.o -MF CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.o.d -o CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.o -c /home/kulac/projects/3d-octtree-compression/src/ModelManager.cc
+
+CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kulac/projects/3d-octtree-compression/src/ModelManager.cc > CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.i
+
+CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kulac/projects/3d-octtree-compression/src/ModelManager.cc -o CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.s
 
 # Object files for target 3dOctreeCompression
 3dOctreeCompression_OBJECTS = \
-"CMakeFiles/3dOctreeCompression.dir/main.cpp.o" \
-"CMakeFiles/3dOctreeCompression.dir/src/glad.c.o"
+"CMakeFiles/3dOctreeCompression.dir/main.cc.o" \
+"CMakeFiles/3dOctreeCompression.dir/src/Model.cc.o" \
+"CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o" \
+"CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.o" \
+"CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o" \
+"CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.o"
 
 # External object files for target 3dOctreeCompression
-3dOctreeCompression_EXTERNAL_OBJECTS =
+3dOctreeCompression_EXTERNAL_OBJECTS = \
+"/home/kulac/projects/3d-octtree-compression/build/CMakeFiles/glad_lib.dir/src/glad.c.o"
 
-3dOctreeCompression: CMakeFiles/3dOctreeCompression.dir/main.cpp.o
-3dOctreeCompression: CMakeFiles/3dOctreeCompression.dir/src/glad.c.o
-3dOctreeCompression: CMakeFiles/3dOctreeCompression.dir/build.make
-3dOctreeCompression: /usr/lib/x86_64-linux-gnu/libGL.so
-3dOctreeCompression: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
-3dOctreeCompression: CMakeFiles/3dOctreeCompression.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable 3dOctreeCompression"
+bin/3dOctreeCompression: CMakeFiles/3dOctreeCompression.dir/main.cc.o
+bin/3dOctreeCompression: CMakeFiles/3dOctreeCompression.dir/src/Model.cc.o
+bin/3dOctreeCompression: CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o
+bin/3dOctreeCompression: CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.o
+bin/3dOctreeCompression: CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o
+bin/3dOctreeCompression: CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.o
+bin/3dOctreeCompression: CMakeFiles/glad_lib.dir/src/glad.c.o
+bin/3dOctreeCompression: CMakeFiles/3dOctreeCompression.dir/build.make
+bin/3dOctreeCompression: /usr/lib/x86_64-linux-gnu/libGL.so
+bin/3dOctreeCompression: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
+bin/3dOctreeCompression: CMakeFiles/3dOctreeCompression.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable bin/3dOctreeCompression"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/3dOctreeCompression.dir/link.txt --verbose=$(VERBOSE)
+	/usr/bin/cmake -E copy_directory /home/kulac/projects/3d-octtree-compression/models /home/kulac/projects/3d-octtree-compression/build/bin/models
 
 # Rule to build all files generated by this target.
-CMakeFiles/3dOctreeCompression.dir/build: 3dOctreeCompression
+CMakeFiles/3dOctreeCompression.dir/build: bin/3dOctreeCompression
 .PHONY : CMakeFiles/3dOctreeCompression.dir/build
 
 CMakeFiles/3dOctreeCompression.dir/clean:

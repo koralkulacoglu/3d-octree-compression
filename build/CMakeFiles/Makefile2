@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = /home/kulac/projects/3d-octtree-compression/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/glad_lib.dir/all
 all: CMakeFiles/3dOctreeCompression.dir/all
 .PHONY : all
 
@@ -71,22 +72,49 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/glad_lib.dir/clean
 clean: CMakeFiles/3dOctreeCompression.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/glad_lib.dir
+
+# All Build rule for target.
+CMakeFiles/glad_lib.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad_lib.dir/build.make CMakeFiles/glad_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad_lib.dir/build.make CMakeFiles/glad_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=8 "Built target glad_lib"
+.PHONY : CMakeFiles/glad_lib.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/glad_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kulac/projects/3d-octtree-compression/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/glad_lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kulac/projects/3d-octtree-compression/build/CMakeFiles 0
+.PHONY : CMakeFiles/glad_lib.dir/rule
+
+# Convenience name for target.
+glad_lib: CMakeFiles/glad_lib.dir/rule
+.PHONY : glad_lib
+
+# clean rule for target.
+CMakeFiles/glad_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad_lib.dir/build.make CMakeFiles/glad_lib.dir/clean
+.PHONY : CMakeFiles/glad_lib.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/3dOctreeCompression.dir
 
 # All Build rule for target.
-CMakeFiles/3dOctreeCompression.dir/all:
+CMakeFiles/3dOctreeCompression.dir/all: CMakeFiles/glad_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=1,2,3 "Built target 3dOctreeCompression"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kulac/projects/3d-octtree-compression/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target 3dOctreeCompression"
 .PHONY : CMakeFiles/3dOctreeCompression.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/3dOctreeCompression.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kulac/projects/3d-octtree-compression/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kulac/projects/3d-octtree-compression/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/3dOctreeCompression.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kulac/projects/3d-octtree-compression/build/CMakeFiles 0
 .PHONY : CMakeFiles/3dOctreeCompression.dir/rule

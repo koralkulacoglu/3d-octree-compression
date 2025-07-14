@@ -1,6 +1,6 @@
 // clang-format off
-#include <glad/glad.h>   // MUST be first
-#include <GLFW/glfw3.h>  // MUST be after glad
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 // clang-format on
 
 #include <cmath>
@@ -8,6 +8,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <iostream>
+
+#include "Model.h"
+#include "ModelManager.h"
 
 // Vertex shader source
 const char* vertexShaderSource = R"(
@@ -23,6 +26,7 @@ uniform mat4 projection;
 
 void main() {
     gl_Position = projection * view * model * vec4(aPos, 1.0);
+    gl_PointSize = 3.0;  // Make points visible
     vertexColor = aColor;
 }
 )";
@@ -39,7 +43,7 @@ void main() {
 )";
 
 // Camera controls
-float cameraDistance = 5.0f;
+float cameraDistance = 3.0f;
 float cameraAngleX = 0.0f;   // Horizontal rotation
 float cameraAngleY = 30.0f;  // Vertical rotation (start at slight angle)
 bool mousePressed = false;
@@ -47,7 +51,7 @@ double lastMouseX = 0.0;
 double lastMouseY = 0.0;
 
 void mouse_button_callback(GLFWwindow* window, int button, int action,
-                           int mods) {
+                           [[maybe_unused]] int mods) {
     if (button == GLFW_MOUSE_BUTTON_LEFT) {
         if (action == GLFW_PRESS) {
             mousePressed = true;
@@ -58,7 +62,8 @@ void mouse_button_callback(GLFWwindow* window, int button, int action,
     }
 }
 
-void cursor_position_callback(GLFWwindow* window, double xpos, double ypos) {
+void cursor_position_callback([[maybe_unused]] GLFWwindow* window, double xpos,
+                              double ypos) {
     if (mousePressed) {
         float deltaX = xpos - lastMouseX;
         float deltaY = ypos - lastMouseY;
@@ -75,7 +80,8 @@ void cursor_position_callback(GLFWwindow* window, double xpos, double ypos) {
     }
 }
 
-void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
+void scroll_callback([[maybe_unused]] GLFWwindow* window,
+                     [[maybe_unused]] double xoffset, double yoffset) {
     cameraDistance -= yoffset * 0.5f;
     if (cameraDistance < 1.0f) cameraDistance = 1.0f;
     if (cameraDistance > 20.0f) cameraDistance = 20.0f;
@@ -100,7 +106,7 @@ int main() {
 
     // Create window
     GLFWwindow* window =
-        glfwCreateWindow(800, 600, "3D Cube Viewer", nullptr, nullptr);
+        glfwCreateWindow(800, 600, "3D Bunny Viewer", nullptr, nullptr);
     if (!window) {
         std::cerr << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
@@ -120,8 +126,9 @@ int main() {
         return -1;
     }
 
-    // Enable depth testing
+    // Enable depth testing and point size
     glEnable(GL_DEPTH_TEST);
+    glEnable(GL_PROGRAM_POINT_SIZE);
 
     // Compile vertex shader
     unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -167,42 +174,45 @@ int main() {
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
 
-    // Define cube vertices with colors
-    float vertices[] = {
-        // positions         // colors
-        -0.5f, -0.5f, -0.5f, 1.0f, 0.0f, 0.0f,  // 0 - red
-        0.5f,  -0.5f, -0.5f, 0.0f, 1.0f, 0.0f,  // 1 - green
-        0.5f,  0.5f,  -0.5f, 0.0f, 0.0f, 1.0f,  // 2 - blue
-        -0.5f, 0.5f,  -0.5f, 1.0f, 1.0f, 0.0f,  // 3 - yellow
-        -0.5f, -0.5f, 0.5f,  1.0f, 0.0f, 1.0f,  // 4 - magenta
-        0.5f,  -0.5f, 0.5f,  0.0f, 1.0f, 1.0f,  // 5 - cyan
-        0.5f,  0.5f,  0.5f,  0.5f, 0.5f, 0.5f,  // 6 - gray
-        -0.5f, 0.5f,  0.5f,  1.0f, 0.5f, 0.0f   // 7 - orange
-    };
+    // Load the bunny model using new API
+    ModelManager modelManager;
+    std::unique_ptr<Model> bunny;
 
-    unsigned int indices[] = {
-        0, 1, 2, 2, 3, 0,  // back face
-        4, 5, 6, 6, 7, 4,  // front face
-        7, 3, 0, 0, 4, 7,  // left face
-        1, 5, 6, 6, 2, 1,  // right face
-        3, 2, 6, 6, 7, 3,  // top face
-        0, 1, 5, 5, 4, 0   // bottom face
-    };
+    try {
+        bunny = modelManager.loadModel("models/bunny.obj");
+    } catch (const std::exception& e) {
+        std::cerr << "Failed to load bunny model: " << e.what() << std::endl;
+        return -1;
+    }
+
+    if (!bunny || bunny->vertices.empty()) {
+        std::cerr << "Failed to load bunny model!" << std::endl;
+        return -1;
+    }
+
+    // Create combined vertex data (position + color)
+    std::vector<float> vertices;
+    vertices.reserve(bunny->vertices.size() * 6);
+
+    for (size_t i = 0; i < bunny->vertices.size(); ++i) {
+        vertices.push_back(bunny->vertices[i].x);
+        vertices.push_back(bunny->vertices[i].y);
+        vertices.push_back(bunny->vertices[i].z);
+        vertices.push_back(bunny->colors[i].x);
+        vertices.push_back(bunny->colors[i].y);
+        vertices.push_back(bunny->colors[i].z);
+    }
 
     // Create vertex array object and buffers
-    unsigned int VAO, VBO, EBO;
+    unsigned int VAO, VBO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
-    glGenBuffers(1, &EBO);
 
     glBindVertexArray(VAO);
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices,
-                 GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float),
+                 vertices.data(), GL_STATIC_DRAW);
 
     // Position attribute
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float),
@@ -225,10 +235,10 @@ int main() {
         // Use shader program
         glUseProgram(shaderProgram);
 
-        // Model matrix - keep the cube stationary at origin
+        // Model matrix - keep the bunny stationary at origin
         glm::mat4 model = glm::mat4(1.0f);
 
-        // View matrix - orbit camera around the cube
+        // View matrix - orbit camera around the bunny
         float camX = sin(glm::radians(cameraAngleX)) *
                      cos(glm::radians(cameraAngleY)) * cameraDistance;
         float camY = sin(glm::radians(cameraAngleY)) * cameraDistance;
@@ -255,9 +265,9 @@ int main() {
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
         glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
-        // Draw the cube
+        // Draw the bunny as points
         glBindVertexArray(VAO);
-        glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
+        glDrawArrays(GL_POINTS, 0, bunny->vertices.size());
 
         // Auto-rotate camera if not being controlled by mouse
         if (!mousePressed) {
@@ -271,9 +281,9 @@ int main() {
     // Cleanup
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
-    glDeleteBuffers(1, &EBO);
     glDeleteProgram(shaderProgram);
 
     glfwTerminate();
+
     return 0;
 }

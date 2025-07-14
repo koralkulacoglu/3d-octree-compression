@@ -7,11 +7,11 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/kulac/projects/3d-octtree-compression/include
 
-C_FLAGS = 
+C_FLAGS = -Wall -Wextra -Wpedantic
 
 CXX_DEFINES = 
 
 CXX_INCLUDES = -I/home/kulac/projects/3d-octtree-compression/include
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = -std=gnu++17 -Wall -Wextra -Wpedantic
 

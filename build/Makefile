@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named glad_lib
+
+# Build rule for target.
+glad_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glad_lib
+.PHONY : glad_lib
+
+# fast build rule for target.
+glad_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad_lib.dir/build.make CMakeFiles/glad_lib.dir/build
+.PHONY : glad_lib/fast
+
+#=============================================================================
 # Target rules for targets named 3dOctreeCompression
 
 # Build rule for target.
@@ -129,36 +142,156 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/build
 .PHONY : 3dOctreeCompression/fast
 
-main.o: main.cpp.o
+main.o: main.cc.o
 .PHONY : main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/main.cpp.o
-.PHONY : main.cpp.o
+main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/main.cc.o
+.PHONY : main.cc.o
 
-main.i: main.cpp.i
+main.i: main.cc.i
 .PHONY : main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/main.cpp.i
-.PHONY : main.cpp.i
+main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/main.cc.i
+.PHONY : main.cc.i
 
-main.s: main.cpp.s
+main.s: main.cc.s
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/main.cpp.s
-.PHONY : main.cpp.s
+main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/main.cc.s
+.PHONY : main.cc.s
+
+src/CompressedModel.o: src/CompressedModel.cc.o
+.PHONY : src/CompressedModel.o
+
+# target to build an object file
+src/CompressedModel.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.o
+.PHONY : src/CompressedModel.cc.o
+
+src/CompressedModel.i: src/CompressedModel.cc.i
+.PHONY : src/CompressedModel.i
+
+# target to preprocess a source file
+src/CompressedModel.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.i
+.PHONY : src/CompressedModel.cc.i
+
+src/CompressedModel.s: src/CompressedModel.cc.s
+.PHONY : src/CompressedModel.s
+
+# target to generate assembly for a file
+src/CompressedModel.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.s
+.PHONY : src/CompressedModel.cc.s
+
+src/Model.o: src/Model.cc.o
+.PHONY : src/Model.o
+
+# target to build an object file
+src/Model.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/Model.cc.o
+.PHONY : src/Model.cc.o
+
+src/Model.i: src/Model.cc.i
+.PHONY : src/Model.i
+
+# target to preprocess a source file
+src/Model.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/Model.cc.i
+.PHONY : src/Model.cc.i
+
+src/Model.s: src/Model.cc.s
+.PHONY : src/Model.s
+
+# target to generate assembly for a file
+src/Model.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/Model.cc.s
+.PHONY : src/Model.cc.s
+
+src/ModelManager.o: src/ModelManager.cc.o
+.PHONY : src/ModelManager.o
+
+# target to build an object file
+src/ModelManager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.o
+.PHONY : src/ModelManager.cc.o
+
+src/ModelManager.i: src/ModelManager.cc.i
+.PHONY : src/ModelManager.i
+
+# target to preprocess a source file
+src/ModelManager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.i
+.PHONY : src/ModelManager.cc.i
+
+src/ModelManager.s: src/ModelManager.cc.s
+.PHONY : src/ModelManager.s
+
+# target to generate assembly for a file
+src/ModelManager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.s
+.PHONY : src/ModelManager.cc.s
+
+src/OBJLoader.o: src/OBJLoader.cc.o
+.PHONY : src/OBJLoader.o
+
+# target to build an object file
+src/OBJLoader.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o
+.PHONY : src/OBJLoader.cc.o
+
+src/OBJLoader.i: src/OBJLoader.cc.i
+.PHONY : src/OBJLoader.i
+
+# target to preprocess a source file
+src/OBJLoader.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.i
+.PHONY : src/OBJLoader.cc.i
+
+src/OBJLoader.s: src/OBJLoader.cc.s
+.PHONY : src/OBJLoader.s
+
+# target to generate assembly for a file
+src/OBJLoader.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.s
+.PHONY : src/OBJLoader.cc.s
+
+src/OctreeCompressor.o: src/OctreeCompressor.cc.o
+.PHONY : src/OctreeCompressor.o
+
+# target to build an object file
+src/OctreeCompressor.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o
+.PHONY : src/OctreeCompressor.cc.o
+
+src/OctreeCompressor.i: src/OctreeCompressor.cc.i
+.PHONY : src/OctreeCompressor.i
+
+# target to preprocess a source file
+src/OctreeCompressor.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.i
+.PHONY : src/OctreeCompressor.cc.i
+
+src/OctreeCompressor.s: src/OctreeCompressor.cc.s
+.PHONY : src/OctreeCompressor.s
+
+# target to generate assembly for a file
+src/OctreeCompressor.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.s
+.PHONY : src/OctreeCompressor.cc.s
 
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
 
 # target to build an object file
 src/glad.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/glad.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad_lib.dir/build.make CMakeFiles/glad_lib.dir/src/glad.c.o
 .PHONY : src/glad.c.o
 
 src/glad.i: src/glad.c.i
@@ -166,7 +299,7 @@ src/glad.i: src/glad.c.i
 
 # target to preprocess a source file
 src/glad.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/glad.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad_lib.dir/build.make CMakeFiles/glad_lib.dir/src/glad.c.i
 .PHONY : src/glad.c.i
 
 src/glad.s: src/glad.c.s
@@ -174,7 +307,7 @@ src/glad.s: src/glad.c.s
 
 # target to generate assembly for a file
 src/glad.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/glad.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad_lib.dir/build.make CMakeFiles/glad_lib.dir/src/glad.c.s
 .PHONY : src/glad.c.s
 
 # Help Target
@@ -186,9 +319,25 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... 3dOctreeCompression"
+	@echo "... glad_lib"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/CompressedModel.o"
+	@echo "... src/CompressedModel.i"
+	@echo "... src/CompressedModel.s"
+	@echo "... src/Model.o"
+	@echo "... src/Model.i"
+	@echo "... src/Model.s"
+	@echo "... src/ModelManager.o"
+	@echo "... src/ModelManager.i"
+	@echo "... src/ModelManager.s"
+	@echo "... src/OBJLoader.o"
+	@echo "... src/OBJLoader.i"
+	@echo "... src/OBJLoader.s"
+	@echo "... src/OctreeCompressor.o"
+	@echo "... src/OctreeCompressor.i"
+	@echo "... src/OctreeCompressor.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

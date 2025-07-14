@@ -1,10 +1,18 @@
 file(REMOVE_RECURSE
-  "3dOctreeCompression"
-  "3dOctreeCompression.pdb"
-  "CMakeFiles/3dOctreeCompression.dir/main.cpp.o"
-  "CMakeFiles/3dOctreeCompression.dir/main.cpp.o.d"
-  "CMakeFiles/3dOctreeCompression.dir/src/glad.c.o"
-  "CMakeFiles/3dOctreeCompression.dir/src/glad.c.o.d"
+  "CMakeFiles/3dOctreeCompression.dir/main.cc.o"
+  "CMakeFiles/3dOctreeCompression.dir/main.cc.o.d"
+  "CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.o"
+  "CMakeFiles/3dOctreeCompression.dir/src/CompressedModel.cc.o.d"
+  "CMakeFiles/3dOctreeCompression.dir/src/Model.cc.o"
+  "CMakeFiles/3dOctreeCompression.dir/src/Model.cc.o.d"
+  "CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.o"
+  "CMakeFiles/3dOctreeCompression.dir/src/ModelManager.cc.o.d"
+  "CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o"
+  "CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o.d"
+  "CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o"
+  "CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o.d"
+  "bin/3dOctreeCompression"
+  "bin/3dOctreeCompression.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

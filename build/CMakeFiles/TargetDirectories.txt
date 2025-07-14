@@ -1,3 +1,4 @@
+/home/kulac/projects/3d-octtree-compression/build/CMakeFiles/glad_lib.dir
 /home/kulac/projects/3d-octtree-compression/build/CMakeFiles/3dOctreeCompression.dir
 /home/kulac/projects/3d-octtree-compression/build/CMakeFiles/edit_cache.dir
 /home/kulac/projects/3d-octtree-compression/build/CMakeFiles/rebuild_cache.dir
