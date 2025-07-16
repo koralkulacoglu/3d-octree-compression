@@ -1,6 +1,6 @@
 # 3D Octree Compression
 
-A C++ implementation of real-time 3D image compression using octrees, with OpenGL visualization.
+A C++ implementation of super fast 3D image compression using octrees, with OpenGL visualization.
 
 <table>
   <tr>
