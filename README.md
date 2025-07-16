@@ -2,6 +2,8 @@
 
 A C++ implementation of 3D image compression using octree data structures, with OpenGL visualization.
 
+![bunny_gif](https://github.com/user-attachments/assets/bfb98448-b7a4-4b69-8182-5201847749fa)
+
 ## Dependencies
 
 - C++17 compiler (`g++` or `clang++`)
