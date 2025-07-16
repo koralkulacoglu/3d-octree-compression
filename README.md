@@ -9,7 +9,7 @@ A C++ implementation of real-time 3D image compression using octrees, with OpenG
       <sub><b>Figure 1:</b> 3D octree compression per layer</sub>
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/70507d24-57bd-4922-ac48-ced328385b10" alt="bunny_all_nodes" width="74%" /><br/>
+      <img src="https://github.com/user-attachments/assets/70507d24-57bd-4922-ac48-ced328385b10" alt="bunny_all_nodes" width="74.5%" /><br/>
       <sub><b>Figure 2:</b> Complete 3D octree compression with color-coded leaf nodes</sub>
     </td>
   </tr>
