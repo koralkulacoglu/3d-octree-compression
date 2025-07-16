@@ -1,11 +1,20 @@
 # 3D Octree Compression
 
-A C++ implementation of 3D image compression using octree data structures, with OpenGL visualization.
+A C++ implementation of real-time 3D image compression using octrees, with OpenGL visualization.
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/bfb98448-b7a4-4b69-8182-5201847749fa" alt="bunny_gif" width="49.7%" />
-  <img src="https://github.com/user-attachments/assets/70507d24-57bd-4922-ac48-ced328385b10" alt="bunny_all_nodes" width="45%" />
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/bfb98448-b7a4-4b69-8182-5201847749fa" alt="bunny_gif" width="100%" /><br/>
+      <sub><b>Figure 1:</b> 3D octree compression per layer</sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/70507d24-57bd-4922-ac48-ced328385b10" alt="bunny_all_nodes" width="74%" /><br/>
+      <sub><b>Figure 2:</b> Complete 3D octree compression with color-coded leaf nodes</sub>
+    </td>
+  </tr>
+</table>
+
 
 # How it Works
 
