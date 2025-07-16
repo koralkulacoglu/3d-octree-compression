@@ -33,7 +33,7 @@ Octree compression works by recursively subdividing a 3D image into eight smalle
     </td>
     <td align="center">
       <img src="https://github.com/user-attachments/assets/358b368d-bdb6-421e-b0ee-58b403750d03" alt="teapot_full" width="100%" /><br/>
-      <sub><b>Figure 2:</b> Complete - complete (4,000 vertices)</sub>
+      <sub><b>Figure 2:</b> Teapot - complete (4,000 vertices)</sub>
     </td>
   </tr>
   <tr>
