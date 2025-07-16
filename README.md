@@ -2,7 +2,26 @@
 
 A C++ implementation of super fast 3D image compression using octrees, with OpenGL visualization.
 
-![bunny_gif](https://github.com/user-attachments/assets/64fd9c33-67a8-41a6-9c1e-10047f4b398a)
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/bfb98448-b7a4-4b69-8182-5201847749fa" alt="bunny_gif" width="100%" /><br/>
+      <sub><b>Figure 1:</b> Octree layers with coloured leaf nodes</sub>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/70507d24-57bd-4922-ac48-ced328385b10" alt="bunny_all_nodes" width="74.5%" /><br/>
+      <sub><b>Figure 2:</b> Complete octree with coloured leaf nodes</sub>
+    </td>
+  </tr>
+</table>
+
+# How it Works
+
+Octree compression works by recursively subdividing a 3D image into eight smaller cubes (octants). If all voxels within an octant have similar or identical values, the region is represented by a single node instead of individual voxels. This reduces the amount of data by efficiently summarizing uniform areas, allowing for compact storage and faster processing.
+
+<p align="center">
+  <img width="507" height="188" alt="image" src="https://github.com/user-attachments/assets/b7ccb38a-95a3-44cb-ac2c-31cfd53cc35f" />
+</p>
 
 # More Examples
 
@@ -38,12 +57,6 @@ A C++ implementation of super fast 3D image compression using octrees, with Open
     </td>
   </tr>
 </table>
-
-# How it Works
-
-Octree compression works by recursively subdividing a 3D image into eight smaller cubes (octants). If all voxels within an octant have similar or identical values, the region is represented by a single node instead of individual voxels. This reduces the amount of data by efficiently summarizing uniform areas, allowing for compact storage and faster processing.
-
-<img width="1336" height="813" alt="image" src="https://github.com/user-attachments/assets/91d5750d-f226-41de-b06e-36ff6a650b26" />
 
 # Local Setup
 
