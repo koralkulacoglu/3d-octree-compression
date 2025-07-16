@@ -11,7 +11,9 @@ A C++ implementation of 3D image compression using octree data structures, with 
 
 Octree compression works by recursively subdividing a 3D image into eight smaller cubes (octants). If all voxels within an octant have similar or identical values, the region is represented by a single node instead of individual voxels. This reduces the amount of data by efficiently summarizing uniform areas, allowing for compact storage and faster processing.
 
-<img width="507" height="188" alt="image" src="https://github.com/user-attachments/assets/b7ccb38a-95a3-44cb-ac2c-31cfd53cc35f" />
+<p align="center">
+  <img width="507" height="188" alt="image" src="https://github.com/user-attachments/assets/b7ccb38a-95a3-44cb-ac2c-31cfd53cc35f" />
+</p>
 
 # Local Setup
 
