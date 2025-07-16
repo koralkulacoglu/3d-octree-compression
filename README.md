@@ -2,7 +2,10 @@
 
 A C++ implementation of 3D image compression using octree data structures, with OpenGL visualization.
 
-![bunny_gif](https://github.com/user-attachments/assets/bfb98448-b7a4-4b69-8182-5201847749fa)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bfb98448-b7a4-4b69-8182-5201847749fa" alt="bunny_gif" width="49.7%" />
+  <img src="https://github.com/user-attachments/assets/70507d24-57bd-4922-ac48-ced328385b10" alt="bunny_all_nodes" width="45%" />
+</p>
 
 # How it Works
 
