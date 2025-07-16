@@ -83,7 +83,7 @@ sudo apt install libgl1-mesa-dev libglu1-mesa-dev
 ### Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/koralkulacoglu/3d-octree-compression.git
 cd 3d-octtree-compression
 ```
 
@@ -101,33 +101,19 @@ python -m glad --profile=core --api=gl=4.6 --generator=c --out-path=.
 ```bash
 mkdir build && cd build
 cmake ..
-make -j$(nproc)
+make -j
 ```
 
 ## Run
 
 ```bash
-./build/OctreeViewer
-```
-
-## Controls
-
-- `WASD` — Move camera
-- Mouse — Look around
-- `M` — Toggle mouse capture
-- `ESC` — Exit
-
-## WSL Display Setup
-
-If using WSL, ensure you have an X server running (e.g., VcXsrv or WSLg), then set the display:
-
-```bash
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
+cd bin
+./OctreeViewer
 ```
 
 ## Rebuild
 
 ```bash
 cd build
-rm -rf * && cmake .. && make -j$(nproc)
+rm -rf * && cmake .. && make -j
 ```
