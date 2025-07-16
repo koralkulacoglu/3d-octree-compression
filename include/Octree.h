@@ -18,7 +18,7 @@ class Octree {
     };
 
     Octree(const glm::vec3& center, float halfSize, int maxDepth = 8)
-        : maxDepth(maxDepth), currentDepth(0) {
+        : maxDepth(maxDepth), actualMaxDepth(0) {
         root = std::make_unique<Node>();
         root->center = center;
         root->halfSize = halfSize;
@@ -35,15 +35,20 @@ class Octree {
     }
 
     const Node* getRoot() const { return root.get(); }
+    int getMaxDepth() const { return maxDepth; }
+    int getActualMaxDepth() const { return actualMaxDepth; }
 
    private:
     std::unique_ptr<Node> root;
     int maxDepth;
-    int currentDepth;
+    int actualMaxDepth;
 
     void insertHelper(Node* node, const T& item, const glm::vec3& position,
                       int depth) {
         if (!node) return;
+
+        // Update actual max depth
+        actualMaxDepth = std::max(actualMaxDepth, depth);
 
         // Check if point is inside this node
         glm::vec3 diff = glm::abs(position - node->center);
@@ -65,7 +70,6 @@ class Octree {
             // Redistribute existing data
             std::vector<T> oldData = std::move(node->data);
             for (const auto& oldItem : oldData) {
-                // Assuming T has a position member
                 insertHelper(node, oldItem, oldItem.position, depth);
             }
         }

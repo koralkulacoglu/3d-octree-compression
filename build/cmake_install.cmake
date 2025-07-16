@@ -1,4 +1,4 @@
-# Install script for directory: /home/kulac/projects/3d-octtree-compression
+# Install script for directory: /home/kulac/projects/3d-octree-compression
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/kulac/projects/3d-octtree-compression/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kulac/projects/3d-octree-compression/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

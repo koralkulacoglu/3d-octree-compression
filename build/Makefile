@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kulac/projects/3d-octtree-compression
+CMAKE_SOURCE_DIR = /home/kulac/projects/3d-octree-compression
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kulac/projects/3d-octtree-compression/build
+CMAKE_BINARY_DIR = /home/kulac/projects/3d-octree-compression/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kulac/projects/3d-octtree-compression/build/CMakeFiles /home/kulac/projects/3d-octtree-compression/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kulac/projects/3d-octree-compression/build/CMakeFiles /home/kulac/projects/3d-octree-compression/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kulac/projects/3d-octtree-compression/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kulac/projects/3d-octree-compression/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -286,6 +286,30 @@ src/OctreeCompressor.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.s
 .PHONY : src/OctreeCompressor.cc.s
 
+src/OctreeVisualizer.o: src/OctreeVisualizer.cc.o
+.PHONY : src/OctreeVisualizer.o
+
+# target to build an object file
+src/OctreeVisualizer.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/OctreeVisualizer.cc.o
+.PHONY : src/OctreeVisualizer.cc.o
+
+src/OctreeVisualizer.i: src/OctreeVisualizer.cc.i
+.PHONY : src/OctreeVisualizer.i
+
+# target to preprocess a source file
+src/OctreeVisualizer.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/OctreeVisualizer.cc.i
+.PHONY : src/OctreeVisualizer.cc.i
+
+src/OctreeVisualizer.s: src/OctreeVisualizer.cc.s
+.PHONY : src/OctreeVisualizer.s
+
+# target to generate assembly for a file
+src/OctreeVisualizer.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/3dOctreeCompression.dir/build.make CMakeFiles/3dOctreeCompression.dir/src/OctreeVisualizer.cc.s
+.PHONY : src/OctreeVisualizer.cc.s
+
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
 
@@ -338,6 +362,9 @@ help:
 	@echo "... src/OctreeCompressor.o"
 	@echo "... src/OctreeCompressor.i"
 	@echo "... src/OctreeCompressor.s"
+	@echo "... src/OctreeVisualizer.o"
+	@echo "... src/OctreeVisualizer.i"
+	@echo "... src/OctreeVisualizer.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/3dOctreeCompression.dir/src/OBJLoader.cc.o.d"
   "CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o"
   "CMakeFiles/3dOctreeCompression.dir/src/OctreeCompressor.cc.o.d"
+  "CMakeFiles/3dOctreeCompression.dir/src/OctreeVisualizer.cc.o"
+  "CMakeFiles/3dOctreeCompression.dir/src/OctreeVisualizer.cc.o.d"
   "bin/3dOctreeCompression"
   "bin/3dOctreeCompression.pdb"
 )

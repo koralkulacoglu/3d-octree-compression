@@ -17,6 +17,9 @@ class CompressedModel {
     size_t getCompressedSize() const;
     size_t getVertexCount() const;
 
+    // Add getter for octree visualization
+    const VertexOctree* getOctree() const { return octree.get(); }
+
    private:
     std::unique_ptr<VertexOctree> octree;
     glm::vec3 minBounds;

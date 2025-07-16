@@ -19,6 +19,7 @@ set(HEADERS
     include/IModelCompressor.h
     include/OctreeCompressor.h
     include/ModelManager.h
+    include/OctreeVisualizer.h
 )
 
 # Add source files
@@ -29,6 +30,7 @@ set(SOURCES
     src/CompressedModel.cc
     src/OctreeCompressor.cc
     src/ModelManager.cc
+    src/OctreeVisualizer.cc
 )
 
 # Create a separate object library for glad to control its compilation flags
